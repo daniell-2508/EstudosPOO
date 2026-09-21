@@ -8,41 +8,25 @@ Este repositório reúne meus estudos e exercícios de Programação Orientada a
 
 O objetivo é registrar minha evolução na linguagem Java, praticar a criação de sistemas orientados a objetos e consolidar conceitos importantes para o desenvolvimento de software.
 
-Conteúdos estudados
+Conteúdos estudados:
 
-Classes e objetos;
-
-Atributos e métodos;
-
-Modificadores de acesso, especialmente private e public;
-
-Encapsulamento;
-
-Getters e setters;
-
-Construtores;
-
-Referências para objetos;
-
-Abstração;
-
-Coesão e acoplamento;
-
-Associação, agregação e composição;
-
-Multiplicidades em diagramas UML;
-
-Coleções com ArrayList;
-
-Estruturas de chave e valor com HashMap;
-
-Laços for-each para percorrer coleções;
-
-Comparação de textos com .equals();
-
-Organização das responsabilidades entre classes.
-
-Práticas desenvolvidas
+-Classes e objetos;
+-Atributos e métodos;
+-Modificadores de acesso, especialmente private e public;
+-Encapsulamento;
+-Getters e setters;
+-Construtores;
+-Referências para objetos;
+-Abstração;
+-Coesão e acoplamento;
+-Associação, agregação e composição;
+-Multiplicidades em diagramas UML;
+-Coleções com ArrayList;
+-Estruturas de chave e valor com HashMap;
+-Laços for-each para percorrer coleções;
+-Comparação de textos com .equals();
+-Organização das responsabilidades entre classes.
+-Práticas desenvolvidas
 
 Os exercícios deste repositório envolvem situações como:
 
