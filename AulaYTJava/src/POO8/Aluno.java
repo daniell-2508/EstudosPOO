@@ -1,7 +1,5 @@
 package POO8;
 
-
-
 public class Aluno {
 
     //ATRIBUTOS
@@ -13,11 +11,12 @@ public class Aluno {
     private double ambicao;
     private double estrategia;
     private double criatividade;
+    private String casa;
     
 
 
     //CONSTRUTOR
-    public Aluno(String nome, int idade, double coragem, double inteligencia, double lealdade, double ambicao, double estrategia, double criatividade,String casa){
+    public Aluno(String nome, int idade, double coragem, double inteligencia, double lealdade, double ambicao, double estrategia, double criatividade){
         this.nome = nome;
         this.idade = idade;
         this.coragem = coragem;
@@ -56,18 +55,18 @@ public class Aluno {
         return (((2 * lealdade) + coragem) / 3);
     }
 
-    public void calcularCasa(Aluno aluno){
-        String casa;
-        if (aluno.grifinoria() > aluno.sonserina() && aluno.grifinoria() > aluno.corvinal() && aluno.grifinoria() > aluno.lufalufa()) {
+    public void calcularCasa(){
+        
+        if (grifinoria() >= sonserina() && grifinoria() >= corvinal() && grifinoria() >= lufalufa()) {
             casa = "Grifinoria";
         }
-        if (aluno.sonserina() > aluno.grifinoria() && aluno.sonserina() > aluno.corvinal() && aluno.sonserina() > aluno.lufalufa()){
+        if (sonserina() >= grifinoria() && sonserina() >= corvinal() && sonserina() >= lufalufa()){
             casa = "Sonserina";
         }
-        if (aluno.corvinal() > aluno.grifinoria() && aluno.corvinal() > aluno.sonserina() && aluno.corvinal() > aluno.lufalufa()){
+        if (corvinal() >= grifinoria() && corvinal() >= sonserina() && corvinal() >= lufalufa()){
             casa = "Corvinal";
         }
-        if (aluno.lufalufa() > aluno.grifinoria() && aluno.lufalufa() > aluno.sonserina() && aluno.lufalufa() > aluno.corvinal()){
+        if (lufalufa() >= grifinoria() && lufalufa() >= sonserina() && lufalufa() >= corvinal()){
             casa = "Lufa-Lufa";
         }
  }
