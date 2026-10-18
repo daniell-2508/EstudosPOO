@@ -1,4 +1,5 @@
 package POO8;
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class Main{
@@ -7,15 +8,26 @@ public class Main{
         
         Scanner entrada = new Scanner(System.in);
 
-        String continuar = "s";
+        Aluno aluno[] = new Aluno[10];
 
-        while(continuar.equalsIgnoreCase("s")){
+        
+
+        for (int i = 0; i < 10; i++){
+
+            System.out.println("Quer cadastrar outro aluno? (s/n) ");
+            String teste = entrada.next();
+
+            if (teste.equalsIgnoreCase("s")){
+            
 
             System.out.print("Digite seu nome: ");
             String nome = entrada.next();
 
-            System.out.print("Digite sua idade: ");
-            int idade = entrada.nextInt();
+            System.out.print("Digite seu sobrenome: ");
+            String sobrenome = entrada.next();
+
+            System.out.print("Digite sua data de nascimento: ");
+            LocalDate data_nascimento = entrada.next();
 
             System.out.print("Digite sua coragem: ");
             double coragem = entrada.nextDouble();
@@ -35,20 +47,55 @@ public class Main{
             System.out.print("Digite a sua Criatividade: ");
             double criatividade = entrada.nextDouble();
 
-            Aluno aluno = new Aluno(nome,idade,coragem,inteligencia,lealdade, ambicao, estrategia, criatividade);
+            aluno[i] = new Aluno(nome, sobrenome, data_nascimento,coragem, inteligencia, lealdade, ambicao, estrategia, criatividade);
+            
+            }
 
-            aluno.calcularCasa();
-            aluno.exibirInformacoes();
-
-            System.out.println("Deseja informar mais uma pessoa? (s/n)");
-
-            continuar = entrada.next();
+            else {
+                for (int i = 0; i < aluno.length; i++){
+                    aluno[i].exibirInformacoes();
+                }
+            }
 
       }
 
-      System.out.println("Programa finalizado!");
-      entrada.close();
+    public void exibirAlunosCasaETotal(String casaTestada){
+        int contador = 0;
+        for (int i = 0; i < aluno.length(); i++){
+            if (aluno[i].calcularCasa().verificarCasa(casaTestada)){
+            aluno[i].exibirInformacoes();
+            contador++;
+            }
+        }
+        System.out.println("Existem " + contador + " da casa: " + casaTestada);
+    }
 
+    public void exibirAlunosMaioresdeIDADE(){
+            for (int i = 0; i < aluno.length(); i++)
+                if (aluno[i].calcularIdade() >= 17){
+                    aluno[i].exibirInformacoes();
+                }
+    }
+
+        public void exibirAlunosMenoresdeIDADE(){
+            for (int i = 0; i < aluno.length(); i++){
+                if (aluno[i].calcularIdade() < 17){
+                    aluno[i].exibirInformacoes();
+                }
+            }
+    }
+
+
+    public int procurarDeterminadoSobrenome(String SobrenomeTestar){
+        int contador = 0;
+        for (int i = 0; i < aluno.length(); i++){
+            if(aluno[i].verificarSobrenome(SobrenomeTestar)){
+                contador++;
+            }
+        }
+        return contador;
+
+    }
 
     }
 }
