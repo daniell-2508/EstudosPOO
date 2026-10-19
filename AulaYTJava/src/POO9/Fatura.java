@@ -35,7 +35,7 @@ public class Fatura {
 
     public void verFatura(){
         System.out.println(getItens());
-        System.out.println(valows);
+        System.out.println(ValorFinal());
     }
     
 }
